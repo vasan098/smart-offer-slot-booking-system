@@ -68,7 +68,7 @@ Start PostgreSQL first, then run:
 ```bash
 cd backend/src/SmartOfferSlotBooking.Api
 dotnet restore
-dotnet run --urls http://localhost:5000
+dotnet run --urls http://localhost:5001
 ```
 
 In a second terminal:
@@ -80,7 +80,7 @@ npm run dev
 ```
 
 Frontend: http://localhost:5173  
-Backend Swagger: http://localhost:5000/swagger
+Backend Swagger: http://localhost:5001/swagger
 
 **Demo login:** `admin@smartoffer.demo` / `Admin@123`
 
@@ -97,7 +97,7 @@ Backend Swagger: http://localhost:5000/swagger
 
 ## API Documentation
 
-- Swagger UI: http://localhost:5000/swagger
+- Swagger UI: http://localhost:5001/swagger for local development, or http://localhost:5000/swagger with Docker
 - Contract: [docs/API_CONTRACT.md](docs/API_CONTRACT.md)
 - ER Diagram: [docs/ER_DIAGRAM.md](docs/ER_DIAGRAM.md)
 - Database Schema: [database/schema.sql](database/schema.sql)

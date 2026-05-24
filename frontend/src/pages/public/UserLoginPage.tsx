@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -35,15 +35,14 @@ export function UserLoginPage() {
 
   const from = (location.state as { from?: { pathname: string } })?.from?.pathname || '/account'
 
-  if (isAuthenticated && user?.role === ROLES.Customer) {
-    navigate(from, { replace: true })
-    return null
-  }
-
-  if (isAuthenticated && user?.role === ROLES.Admin) {
-    navigate('/admin', { replace: true })
-    return null
-  }
+  useEffect(() => {
+    if (isAuthenticated && user?.role === ROLES.Customer) {
+      navigate(from, { replace: true })
+    }
+    if (isAuthenticated && user?.role === ROLES.Admin) {
+      navigate('/admin', { replace: true })
+    }
+  }, [from, isAuthenticated, navigate, user?.role])
 
   const loginForm = useForm<LoginForm>({
     resolver: zodResolver(loginSchema),
