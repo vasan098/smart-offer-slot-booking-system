@@ -1,12 +1,20 @@
 # Screenshots
 
-Save submission screenshots in this folder.
+Submission screenshots are saved in this folder.
 
-Required files:
-![Home](assets/home.png)
+Included screenshots:
 
-- `frontend-current.png` - current captured frontend browser view.
-- `frontend-offers.png` - customer offer listing page.
-- `frontend-booking-detail.png` - customer booking detail page.
-- `frontend-confirmation.png` - booking confirmation page.
-- `swagger.png` - Swagger UI at `http://localhost:5000/swagger`.
+- `public offer listing.png`
+- `public bookings.png`
+- `customer login.png`
+- `booking confirmation page.png`
+- `qr code.png`
+- `admin login page.png`
+- `admin dashboard.png`
+- `create offer.png`
+- `manage offer.png`
+- `manage bookings.png`
+- `edit buisness.png`
+- `csv file export.png`
+- `swagger.png`
+- `swagger1.png`
