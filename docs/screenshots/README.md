@@ -3,6 +3,7 @@
 Save submission screenshots in this folder.
 
 Required files:
+![Home](assets/home.png)
 
 - `frontend-current.png` - current captured frontend browser view.
 - `frontend-offers.png` - customer offer listing page.
