@@ -3,7 +3,7 @@
 ## Required Links
 
 - GitHub repository: https://github.com/vasan098/smart-offer-slot-booking-system
-- Demo video: `docs/demo video.MOV`
+- Demo video: TODO - add an external video link.
 
 ## Required Artifacts
 
