@@ -2,7 +2,7 @@
 
 ## Required Links
 
-- GitHub repository: TODO - paste the final GitHub repository URL after pushing.
+- GitHub repository: https://github.com/vasan098/smart-offer-slot-booking-system
 - Demo video: TODO - paste the 2-3 minute demo video URL after recording/uploading.
 
 ## Required Artifacts
@@ -42,4 +42,3 @@ Keep the video between 2 and 3 minutes:
 - Frontend local dev: `http://localhost:5173`
 - Swagger: `http://localhost:5000/swagger`
 - API base URL: `http://localhost:5000/api`
-
