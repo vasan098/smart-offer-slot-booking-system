@@ -96,10 +96,13 @@ export function CreateOfferPage() {
           <div>
             <label className="text-sm font-medium">Description</label>
             <textarea
-              className="mt-1 w-full rounded-xl border border-slate-200 p-3 dark:border-slate-700 dark:bg-slate-900"
+              className={`mt-1 w-full rounded-xl border border-slate-200 p-3 dark:border-slate-700 dark:bg-slate-900 ${
+                errors.description ? 'border-red-500' : ''
+              }`}
               rows={4}
               {...register('description')}
             />
+            {errors.description && <p className="mt-1 text-xs text-red-500">{errors.description.message}</p>}
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
@@ -120,20 +123,40 @@ export function CreateOfferPage() {
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Input label="Original Price ₹" type="number" error={errors.originalPrice?.message} {...register('originalPrice')} />
-            <Input label="Offer Price ₹" type="number" error={errors.offerPrice?.message} {...register('offerPrice')} />
+            <Input
+              label="Original Price ₹"
+              type="number"
+              error={errors.originalPrice?.message}
+              {...register('originalPrice', { valueAsNumber: true })}
+            />
+            <Input
+              label="Offer Price ₹"
+              type="number"
+              error={errors.offerPrice?.message}
+              {...register('offerPrice', { valueAsNumber: true })}
+            />
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Input label="Start Date" type="date" {...register('startDate')} />
-            <Input label="End Date" type="date" {...register('endDate')} />
+            <Input label="Start Date" type="date" error={errors.startDate?.message} {...register('startDate')} />
+            <Input label="End Date" type="date" error={errors.endDate?.message} {...register('endDate')} />
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Input label="Start Time" type="time" {...register('startTime')} />
-            <Input label="End Time" type="time" {...register('endTime')} />
+            <Input label="Start Time" type="time" error={errors.startTime?.message} {...register('startTime')} />
+            <Input label="End Time" type="time" error={errors.endTime?.message} {...register('endTime')} />
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Input label="Total Capacity" type="number" {...register('totalCapacity')} />
-            <Input label="Max per Customer" type="number" {...register('maxBookingPerCustomer')} />
+            <Input
+              label="Total Capacity"
+              type="number"
+              error={errors.totalCapacity?.message}
+              {...register('totalCapacity', { valueAsNumber: true })}
+            />
+            <Input
+              label="Max per Customer"
+              type="number"
+              error={errors.maxBookingPerCustomer?.message}
+              {...register('maxBookingPerCustomer', { valueAsNumber: true })}
+            />
           </div>
           <Input label="Terms & Conditions" {...register('termsAndConditions')} />
           <Button type="submit" disabled={mutation.isPending}>
